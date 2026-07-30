@@ -236,6 +236,20 @@
   .frame-art .corner.bl{ bottom:-1px; left:-1px; border-right:none; border-top:none; }
   .frame-art .corner.br{ bottom:-1px; right:-1px; border-left:none; border-top:none; }
 
+  /* ---------- Missão / Visão / Valores ---------- */
+  .mvv-wrap{ margin-top:100px; }
+  .mvv-cards{ display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(201,163,76,.18); border:1px solid rgba(201,163,76,.18); margin-bottom:2px; }
+  .mvv-card{ background:var(--ink-2); padding:44px 40px; }
+  .mvv-card .icon{ width:34px; height:34px; color:var(--gold); margin-bottom:18px; }
+  .mvv-card h3{ font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-light); font-weight:600; margin-bottom:14px; }
+  .mvv-card p{ color:var(--cream-dim); font-size:18px; }
+  .valores-card{ background:var(--ink-2); border:1px solid rgba(201,163,76,.18); border-top:none; padding:44px 40px; }
+  .valores-card h3{ font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-light); font-weight:600; margin-bottom:26px; display:flex; align-items:center; gap:14px; }
+  .valores-card h3 .icon{ width:26px; height:26px; color:var(--gold); }
+  .valores-list{ display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; }
+  .valores-list li{ display:flex; align-items:flex-start; gap:12px; color:var(--cream-dim); font-size:17px; }
+  .valores-list li svg{ width:16px; height:16px; margin-top:5px; flex-shrink:0; color:var(--gold); }
+
   /* ---------- Serviços ---------- */
   .services-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:2px; background:rgba(201,163,76,.18); border:1px solid rgba(201,163,76,.18); }
   .service-card{
@@ -352,6 +366,7 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width: 980px){
+    .mvv-cards{ grid-template-columns:1fr; }
     .hero .container{ grid-template-columns:1fr; }
     .hero-visual{ order:-1; margin-bottom:20px; }
     .about-grid, .contact-grid{ grid-template-columns:1fr; }
@@ -384,6 +399,8 @@
     .gallery-item.big{ grid-column:span 1; grid-row:span 1; }
     .footer-grid{ grid-template-columns:1fr; gap:36px; }
     .stat-row{ flex-wrap:wrap; }
+    .valores-list{ grid-template-columns:1fr; }
+    .mvv-card, .valores-card{ padding:34px 26px; }
     .stat{ flex:1 1 50%; border-right:none; border-bottom:1px solid rgba(201,163,76,.2); padding-bottom:20px; margin-bottom:10px;}
   }
 </style>
@@ -470,6 +487,39 @@
           <div class="stat"><strong>6</strong><span>Barbeiros mestres</span></div>
           <div class="stat"><strong>12</strong><span>Serviços especializados</span></div>
         </div>
+      </div>
+    </div>
+
+    <div class="container mvv-wrap reveal">
+      <div class="mvv-cards">
+        <div class="mvv-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.6 6.2L21 9l-5 4.5L17.2 21 12 17.3 6.8 21 8 13.5 3 9l6.4-.8z"/></svg>
+          <h3>Missão</h3>
+          <p>Transformar a autoestima e a confiança de cada cliente por meio de serviços de barbearia, beleza, prótese capilar e formação profissional, oferecendo atendimento humanizado, excelência técnica e uma experiência única em cada visita.</p>
+        </div>
+        <div class="mvv-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <h3>Visão</h3>
+          <p>Ser reconhecida como a principal referência em barbearia, estética masculina, prótese capilar e educação profissional no Oeste da Bahia, expandindo nossa marca e impactando positivamente a vida de milhares de pessoas através do cuidado com a imagem e do desenvolvimento de novos profissionais.</p>
+        </div>
+      </div>
+      <div class="valores-card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.6 6.2L21 9l-5 4.5L17.2 21 12 17.3 6.8 21 8 13.5 3 9l6.4-.8z"/></svg>
+          Nossos Valores
+        </h3>
+        <ul class="valores-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Excelência em cada atendimento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Respeito, ética e honestidade</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Valorização da autoestima e do bem-estar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Inovação e atualização constante</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Compromisso com a qualidade dos serviços e produtos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Atendimento humanizado e personalizado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Profissionalismo e responsabilidade</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Organização, higiene e segurança</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Trabalho em equipe</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gratidão e compromisso com Deus, reconhecendo que toda conquista vem d'Ele</li>
+        </ul>
       </div>
     </div>
   </section>
